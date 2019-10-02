@@ -13,6 +13,7 @@ int main() {
 	
 	return 0;
 }
+//recursion
 int hanoi_tower(int disk_num, int start, int end) {//from A to B, using C as 
 	//base case
 	if (disk_num == 0)
@@ -25,6 +26,7 @@ int hanoi_tower(int disk_num, int start, int end) {//from A to B, using C as
 	move_disk(disk_num, start, end);
 	hanoi_tower(disk_num-1, mid_column, end);
 }
+
 int move_disk(int disk_num, int start, int end) {
 	cout << start <<" "<< end << endl;
 	hanoi_count++;

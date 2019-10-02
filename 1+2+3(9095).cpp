@@ -22,6 +22,7 @@ int main() {
 
 	return 0;
 }
+//recursion
 int getCount(int num) {
 	if (num <= 0)
 		return 0;
@@ -30,6 +31,7 @@ int getCount(int num) {
 
 	return getCount(num - 1) + getCount(num - 2) + getCount(num - 3);
 }
+
 bool isNum(int index) {
 	for (int i = 0;i < A.size();i++) {
 		if (i == index)
