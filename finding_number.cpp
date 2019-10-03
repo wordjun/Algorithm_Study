@@ -17,11 +17,11 @@ int main() {
 	int j = 0, i=0;
 	for (i = 0;i < N;i++) {
 		for (j = 0;j < M;j++) {
-			if (mArr[j] == nArr[i]) {
+			if (mArr[j] == nArr[i]) {//if the number in mArr found a match in nArr
 				cout << 1 << "\n";
 			}
 		}
-		if (i == N-1)
+		if (i == N-1)//if the number in mArr didn't find a match
 			cout << 0 << '\n';
 	}
 }
