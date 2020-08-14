@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <string>
 #include <vector>
 #include<iostream>
@@ -25,4 +26,33 @@ string solution(int a, int b) {
 
 int main() {
     cout << solution(5, 24);
+=======
+#include <string>
+#include <vector>
+#include<iostream>
+using namespace std;
+
+int months[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+vector<string> days = { "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" };
+
+string solution(int a, int b) {
+    string answer = "";
+    
+    int sum = 0;
+    for (int i = 0; i < a - 1; i++) {
+        sum += months[i];
+    }
+    sum += b;
+    sum %= 7;
+    sum += 4;//"FRI"
+    if (sum >= 7) {
+        sum -= 7;
+    }
+    answer = days[sum];
+    return answer;
+}
+
+int main() {
+    cout << solution(5, 24);
+>>>>>>> 79e753052dde2caa3d0ad3df4380779947a9bdba
 }
